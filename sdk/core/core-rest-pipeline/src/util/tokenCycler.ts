@@ -379,6 +379,9 @@ export function createTokenCycler(
     const tenantIdChanged = tenantId !== tokenOptions.tenantId;
 
     if (hasClaimChallenge) {
+      // A claims challenge means the cached token was rejected. Clear it before
+      // starting the claims refresh so beginRefresh uses an immediate deadline
+      // instead of retrying against the rejected token's expiration.
       token = null;
     }
 
