@@ -1,11 +1,16 @@
 # Release History
 
+## 1.25.2 (Unreleased)
+
+### Bugs Fixed
+
+- Fixed concurrent CAE claims challenges reusing incompatible in-flight token refreshes and unhandled rejections from superseded proactive refreshes. [#40087](https://github.com/Azure/azure-sdk-for-js/issues/40087)
+
 ## 1.25.1 (Unreleased)
 
 ### Bugs Fixed
 
 - Restore original abort signals after wrapping, keep legacy signals connected through streamed request and response completion, and dispose streamed authentication challenge bodies before resending requests. [#40251](https://github.com/Azure/azure-sdk-for-js/issues/40251)
-- Fixed concurrent CAE claims challenges reusing incompatible in-flight token refreshes and unhandled rejections from superseded proactive refreshes. [#40087](https://github.com/Azure/azure-sdk-for-js/issues/40087)
 
 ## 1.25.0 (2026-07-13)
 
